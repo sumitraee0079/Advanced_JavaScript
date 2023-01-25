@@ -90,7 +90,7 @@ function updateLastUserActivityTime(post)    {
     }, 1000)
 }
 
+
+deletePost()
 getPosts()
-
-
-
+updateLastUserActivityTime()
