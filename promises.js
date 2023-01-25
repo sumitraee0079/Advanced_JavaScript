@@ -63,6 +63,10 @@ createPost( { title: 'Post Three', body: 'This is post three' })
 }).catch(err => console.log(err))
 
 
+const user = {
+    username: 'sumi',
+    updateLastUserActivityTime: '13th of Jan'
+}
 //createPost({ title: 'Post Three', body: 'This is post three' })
 //.then(getPosts)
 // .catch(err => console.log(err));
@@ -91,6 +95,10 @@ function updateLastUserActivityTime(post)    {
 }
 
 
-deletePost()
-getPosts()
-updateLastUserActivityTime()
+function userUpdatesPost()  {
+Promise.all([getPosts, updateLastUserActivityTime])
+    .then(([getPostsresolves, updateLastUserActivityTimeresolves]) => {
+        console.log(updateLastUserActivityTime)
+    })
+    .catch(err => console.log(err))
+}
